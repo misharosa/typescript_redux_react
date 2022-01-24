@@ -1,7 +1,37 @@
 export interface UserState {
-    users: any[];
+    users: User[];
     loading: boolean;
     error: null | string,
+}
+
+interface User {
+    address: Address;
+    company: Company;
+    email: string
+    id: number
+    name: string
+    phone: string
+    username: string
+    website: string
+}
+
+interface Company {
+    name: string,
+    catchPhrase: string,
+    bs: string
+}
+
+interface Address {
+    street: string,
+    suite: string,
+    city: string,
+    zipcode: string,
+    geo: Geo,
+}
+
+interface Geo {
+    lat: string
+    lng: string
 }
 
 export enum UserActionType {
