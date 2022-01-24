@@ -14,7 +14,7 @@ export const fetchTodos = (page = 1, limit = 10) => {
             })
             setTimeout(() => {
                 dispatch({ type: TodoActionType.FETCH_TODOS_SUCCESS, payload: response.data })
-            }, 1500)
+            }, 500)
         } catch (e) {
             dispatch({ type: TodoActionType.FETCH_TODOS_ERROR, payload: 'Виникла помилка при завантаженні користувачів' })
         }

@@ -10,8 +10,6 @@ export const App = () => {
         <hr/>
         <hr/>
       <TodoList />
-        <hr/>
-        <hr/>
     </div>
   );
 }
