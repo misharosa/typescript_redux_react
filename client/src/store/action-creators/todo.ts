@@ -1,6 +1,6 @@
-import {Dispatch} from "react";
+import { Dispatch } from "react";
 import axios from "axios";
-import {TodoAction, TodoActionType} from "../../types/todo";
+import { TodoAction, TodoActionType } from "../../types/todo";
 
 export const fetchTodos = (page = 1, limit = 10) => {
     return async (dispatch: Dispatch<TodoAction>) => {

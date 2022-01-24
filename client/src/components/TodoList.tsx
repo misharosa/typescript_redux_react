@@ -1,9 +1,10 @@
 import React, {useEffect} from 'react';
 import { useTypedSelector } from "../hooks/useTypedSelector";
 import { useActions } from "../hooks/useActions";
+import { TodoState } from "../types/todo";
 
 export const TodoList: React.FC = () => {
-    const { page, error, loading, todos, limit } = useTypedSelector(state => state.todo)
+    const { page, error, loading, todos, limit } : TodoState = useTypedSelector(state => state.todo)
     const { fetchTodos, setTodoActions } = useActions()
     const pages = [1, 2, 3, 4, 5]
 
@@ -24,7 +25,7 @@ export const TodoList: React.FC = () => {
             <div style={{display: 'flex'}}>
             {
                 pages.map(p =>
-                    <div onClick={() => setTodoActions(p)} style={{border: p === page ? '2px solid green' : '1px solid gray', padding: '5px'}}>
+                    <div key={p} onClick={() => setTodoActions(p)} style={{border: p === page ? '2px solid green' : '1px solid gray', padding: '5px'}}>
                         {p}
                     </div>)
             }

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import UserList from "./components/UserList";
-import {TodoList} from "./components/TodoList";
+import { UserList } from "./components/UserList";
+import { TodoList } from "./components/TodoList";
 
 export const App = () => {
   return (

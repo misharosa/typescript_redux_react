@@ -1,10 +1,11 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { useTypedSelector } from "../hooks/useTypedSelector";
 import { fetchUsers } from "../store/action-creators/user";
 import { useActions } from "../hooks/useActions";
+import { UserState } from "../types/user";
 
-const UserList: React.FC = () => {
-    const { users, error, loading } = useTypedSelector(state => state.user)
+export const UserList: React.FC = () => {
+    const { users, error, loading }: UserState = useTypedSelector(state => state.user)
     const { fetchUsers } = useActions()
 
     useEffect(() => {
@@ -25,5 +26,3 @@ const UserList: React.FC = () => {
         </div>
     );
 };
-
-export default UserList;
